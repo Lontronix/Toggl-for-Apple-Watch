@@ -576,6 +576,7 @@
 				DEVELOPMENT_TEAM = K36HYHZA7X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Toggl for Watch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,6 +597,7 @@
 				DEVELOPMENT_TEAM = K36HYHZA7X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Toggl for Watch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
