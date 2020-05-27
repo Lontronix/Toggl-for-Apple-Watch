@@ -13,36 +13,54 @@ struct ContentView: View {
     @State private var password: String = ""
     var body: some View {
         VStack{
-            Text("Welcome")
-                .font(.title)
-            Text("Please Log in with your Toggl account")
-                .font(.body)
-
-            Spacer()
+            GeometryReader{ geo in
+                VStack{
+                    VStack{
+                        Text("Welcome")
+                            .font(.system(size: 50, design: Font.Design.rounded))
+                            .foregroundColor(Color.red)
+                        Text("Please Log in with your Toggl account")
+                            .font(.callout)
+                    }
+                Spacer()
 
                 VStack(alignment: .leading){
-                        Text("Email Address")
-                        TextField("email address", text: self.$emailAddress)
-                            .frame(width: nil, height: 44, alignment: .center)
-                        Text("Password")
-                        TextField("password", text: self.$password)
-                            .frame(width: nil, height: 44, alignment: .center)
+                    Text("Email Address")
+                        .font(.headline)
+                        .foregroundColor(Color.red)
+                    TextField("email address", text: self.$emailAddress)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(width: geo.size.width * 0.75, height: 44, alignment: .center)
+                    Text("Password")
+                        .font(.headline)
+                        .foregroundColor(Color.red)
+                    TextField("password", text: self.$password)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(width: geo.size.width * 0.75, height: 44, alignment: .center)
                 }
-                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-            Spacer()
-            VStack{
-                Button(action: {
-                    print("ligma")
-                }) {
-                    Text("Sign in")
-                        .foregroundColor(.white)
-                        .frame(width: nil, height: 44, alignment: .center)
-                        .background(Color.red)
-                        .offset(x: 0, y: -10)
+                    .offset(x: 0, y: -72 )
+
+                Spacer()
+
+                VStack {
+
+                    Button(action: {
+                        print("ligma")
+                    }) {
+                        Text("Sign in")
+                            .foregroundColor(.white)
+                            .frame(width: geo.size.width * 0.85, height: 56, alignment: .center)
+                            .background(Color.red)
+                            .cornerRadius(8.0)
+                    }
+                .offset(x: 0, y: -20)
 
                 }
             }
+
         }
+
+    }
     }
 }
 
