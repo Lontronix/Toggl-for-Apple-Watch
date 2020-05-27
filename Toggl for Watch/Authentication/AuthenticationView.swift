@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AuthenticationView: View {
     @State private var emailAddress: String = ""
     @State private var password: String = ""
     var body: some View {
@@ -17,7 +17,7 @@ struct ContentView: View {
                 VStack{
                     VStack{
                         Text("Welcome")
-                            .font(.system(size: 50, design: Font.Design.rounded))
+                            .font(.system(size: geo.size.width * 0.13, design: Font.Design.rounded))
                             .foregroundColor(Color.red)
                         Text("Please Log in with your Toggl account")
                             .font(.callout)
@@ -64,16 +64,16 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AuthenticationView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            ContentView()
+            AuthenticationView()
                 .previewDevice(PreviewDevice(stringLiteral: "iPhone SE"))
                 .previewDisplayName("iPhone SE")
-            ContentView()
+            AuthenticationView()
                 .previewDevice(PreviewDevice(stringLiteral: "iPhone 11"))
                 .previewDisplayName("iPhone 11")
-            ContentView()
+            AuthenticationView()
                 .previewDevice(PreviewDevice(stringLiteral: "iPhone 11 Pro Max"))
                 .previewDisplayName("iPhone 11 Pro Max")
         }
